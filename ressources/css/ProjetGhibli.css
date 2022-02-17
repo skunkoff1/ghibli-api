@@ -1,0 +1,405 @@
+/*thème couleurs* 
+Dark Electric Blue #586F7C
+Charcoal #2F4550
+Powder Blue # B8DBD9*/
+
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("../images/cb.gif");
+    background-size: 80%;
+    opacity: 0.95;
+    min-height: 100vh;
+    height: fit-content;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'Dancing Script', cursive;
+}
+
+#container {
+    width: 90vw;
+    margin: auto;
+}
+
+h1,
+h2 {
+    color: #bd92e2;
+    font-size: 20px;
+}
+
+h3 {
+    color: #bd92e2;
+    font-size: 37px;
+    margin: 2px;
+}
+
+h4 {
+    color: #bd92e2;
+    font-size: 37px;
+    margin: 2px;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+#title h1 {
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*========================== HEADER =============================*/
+
+header {
+    height: 80vh;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*======================== STORY ==============================*/
+
+.Ghibli {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    height: 40px;
+    border-radius: 15px;
+    width: 100px;
+}
+
+#Histoire {
+    color: #bd92e2;
+    font-size: 40px;
+    line-height: 4rem;
+    text-align: justify;
+}
+
+#story1,
+#story2,
+#story3 {
+    width: 70vw;
+    margin: auto;
+}
+
+#story1 {
+    position: absolute;
+    left: 15vw;
+    top: 10vh;
+    opacity: 1;
+}
+
+#story2 {
+    position: absolute;
+    left: 15vw;
+    top: 10vh;
+    opacity: 0;
+}
+
+#story3 {
+    position: absolute;
+    left: 15vw;
+    top: 10vh;
+    opacity: 0;
+}
+
+#storyButtons {
+    display: flex;
+    justify-content: space-around;
+}
+
+#storyButton1,
+#storyButton2,
+#storyButton3 {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #bd92e2;
+    border-radius: 15px;
+}
+
+#storyButton1:hover,
+#storyButton2:hover,
+#storyButton3:hover {
+    cursor: pointer;
+    background-color: #3d2b4e;
+}
+
+#storyButton1 {
+    position: absolute;
+    bottom: 15vh;
+    right: 70vw;
+    background-color: transparent;
+}
+
+#storyButton2 {
+    position: absolute;
+    bottom: 15vh;
+    right: 50vw;
+    background-color: #bd92e2;
+}
+
+#storyButton3 {
+    position: absolute;
+    bottom: 15vh;
+    left: 70vw;
+    background-color: #bd92e2;
+}
+
+
+/*====================== CARROUSSEL ============================*/
+
+#cadre {
+    height: 700px;
+    width: 400px;
+    overflow: hidden;
+    display: none;
+}
+
+#Image {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 12800px;
+    font-size: 0;
+    text-align: left;
+    display: flex;
+}
+
+#movieCardFilms {
+    width: 380px;
+    height: 700px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#movieCardImage {
+    width: 360px;
+    float: left;
+    border-radius: 15px;
+}
+
+.gauche {
+    position: absolute;
+    left: 35%;
+    top: 70%;
+    height: 60px;
+    border-radius: 15px;
+    width: 60px;
+    border: none;
+}
+
+.droite {
+    position: absolute;
+    right: 35%;
+    top: 70%;
+    height: 60px;
+    border-radius: 15px;
+    width: 60px;
+    border: none;
+}
+
+/*=================== CAROUSEL TYPE MANEGE ==================*/
+
+#carJq {
+    display: none;
+    position: relative;
+    top: 15%;
+    right: 3%;
+}
+
+#carFigJq {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 45%;
+}
+
+.imgJq {
+    height: auto;
+    width: 37rem;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    -webkit-transform: scale(0.6) translateY(-2rem);
+    transform: scale(0.6) translateY(-2rem);
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: none;
+    background: #bd92e2;
+    background: linear-gradient(to top, #8f69af, #bd92e2);
+    transition: 1s;
+}
+
+.imgJq.active {
+    z-index: 3;
+    -webkit-transform: scale(1) translateY(0) translateX(0);
+    transform: scale(1) translateY(0) translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+    transition: 1s;
+}
+
+.imgJq.prev,
+.imgJq.next {
+    z-index: 2;
+    -webkit-transform: scale(0.8) translateY(-1rem) translateX(0);
+    transform: scale(0.8) translateY(-1rem) translateX(0);
+    opacity: 0.6;
+    pointer-events: auto;
+    transition: 1s;
+}
+
+#carJq p {
+    margin-top: 60px;
+    font-size: 3rem;
+    color: #bd92e2;
+    text-align: center;
+}
+
+/*==================== FOOTER BOUTONS ==========================*/
+
+#bandeauBouton {
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+}
+
+button {
+    height: 70%;
+    border-radius: 15px;
+    width: 25%;
+    background-color: #3d2b4e;
+    color: #bd92e2;
+    font-size: 25px;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #bd92e2;
+    color: #6d2663;
+}
+
+/*============================== MEDIA QUERIES ========================*/
+@media (max-width: 1800px) {
+    #carJq {
+        right: 1%;
+    }
+}
+
+@media (max-width: 1600px) {
+    #Histoire {
+        font-size: 35px;
+        line-height: 4rem;
+    }
+
+    .imgJq {
+        height: auto;
+        width: 32rem;
+    }
+
+    #carJq {
+        left: 2%;
+    }
+
+    button {
+        width: 35%;
+    }
+}
+
+@media (max-width: 1400px) {
+    #Histoire {
+        font-size: 35px;
+        line-height: 3.5rem;
+    }
+
+    .imgJq {
+        height: auto;
+        width: 28rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    #Histoire {
+        font-size: 30px;
+        line-height: 3.5rem;
+    }
+
+    .imgJq {
+        height: auto;
+        width: 25rem;
+    }
+
+    #carJq {
+        left: 2%;
+    }
+
+    #carJq p {
+        font-size: 2.5rem;
+    }
+
+    button {
+        width: 40%;
+    }
+}
+
+@media (max-width: 1000px) {
+    #Histoire {
+        font-size: 30px;
+        line-height: 3.2rem;
+    }
+
+    .imgJq {
+        height: auto;
+        width: 25rem;
+    }
+
+    #carJq {
+        left: 6%;
+    }
+
+    button {
+        width: 45%;
+    }
+}
+
+@media (max-width: 1000px) {
+    body, html {
+        overflow: auto;
+    }
+
+    #Histoire {
+        font-size: 30px;
+        line-height: 3.2rem;
+    }
+
+    .imgJq {
+        height: auto;
+        width: 25rem;
+    }
+
+    #carJq {
+        left: 6%;
+    }
+
+    button {
+        width: 45%;
+    }
+}

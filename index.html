@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./ressources/css/ProjetGhibli.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="title">
+            <h1>Ghibli</h1>
+        </div>
+        <header id="header">
+            <button type="button" class="Ghibli" onclick="txt()">Accueil</button>
+            <div id="cadre">
+                <figure id="Image">
+                </figure>
+                <button type="button" class="droite" onclick="move('right')"> &raquo;</button>
+                <button type="button" class="gauche" onclick="move('left')">&laquo;</button>
+            </div>
+            <div id="carJq">
+                <figure id="carFigJq">
+                    <img class="imgJq" src="./ressources/Images/img01.jpg">
+                    <img class="imgJq" src="./ressources/Images/img02.jpg">
+                    <img class="imgJq" src="./ressources/Images/img03.png">
+                    <img class="imgJq" src="./ressources/Images/img04.jpg">
+                    <img class="imgJq" src="./ressources/Images/img05.jpg">
+                    <img class="imgJq" src="./ressources/Images/img06.jpg">
+                    <img class="imgJq" src="./ressources/Images/img07.jpg">
+                    <img class="imgJq" src="./ressources/Images/img08.jpg">
+                    <img class="imgJq" src="./ressources/Images/img09.jpg">
+                    <img class="imgJq" src="./ressources/Images/img10.jpg">
+                </figure>
+                <p>Cliquez sur les images à gauche ou à droite pour les faire défiler.</p>
+            </div>
+            <div id="Histoire">
+                <div id="story">
+                    <div id="story1">
+                        <p>Le Studio Ghibli Inc. (株式会社スタジオジブリ, Kabushiki gaisha sutajio Jiburi?) est un studio d'animation japonais fondé par Hayao Miyazaki et Isao Takahata en 1985. Il produit des longs-métrages et courts-métrages d'animation, ainsi que,
+                            dans une moindre mesure, des téléfilms, des séries et des jeux vidéo. Le studio est connu principalement pour ses longs-métrages destinés à un large public et dont plusieurs ont remporté des succès auprès de la critique et
+                            du public, ainsi que de nombreuses récompenses. Le logo du studio est une représentation de Totoro, une créature apparue dans Mon voisin Totoro, l'un des films emblématiques du studio, sorti en 1988.</p>
+                    </div>
+                    <div id="story2">
+                        <p>Le nom « Ghibli » vient du mot italien ghibli (que l’on trouve en anglais sous les formes « ghibli », « gibli », « gibleh »), issu du nom arabe libyen du sirocco, le vent chaud du désert : قبلي ('ghiblī'). Il renvoie également
+                            au nom d’un avion de reconnaissance italien utilisé pendant la Seconde Guerre mondiale, le Caproni Ca.309 Ghibli4. C’est Hayao Miyazaki, grand amateur d'aviation, qui a choisi ce nom. Pour lui, le studio Ghibli se doit de jouer
+                            un rôle d'éclaireur dans le secteur de l'animation japonaise, et d'y faire souffler un vent de nouveautés. </p>
+                    </div>
+                    <div id="story3">
+                        <p>Ghi, dans le mot italien, se prononce comme le mot français « gui » (/ɡi/), alors que, dans le nom du studio, en japonais, il se prononce, comme l’indique son écriture en katakanas (ジブリ), « dji » (/d͡ʒi/) : /dʑiꜜbɯɾi/ La prononciation
+                            « gui » a cependant été utilisée par le studio au Japon pour les titres « anglicisés » des courts-métrages Ghiblies et Ghiblies Episode 2, prononcés « giburīzu » (ギブリーズ?). Les Occidentaux ont tendance à utiliser la prononciation
+                            issue de l'italien.</p>
+                    </div>
+                </div>
+                <div id="storyButtons">
+                    <div id="storyButton1"></div>
+                    <div id="storyButton2"></div>
+                    <div id="storyButton3"></div>
+                </div>
+            </div>
+        </header>
+
+        <div id="bandeauBouton">
+            <button type="button" id="boutonFilms">フィルムズ &nbsp;&nbsp; Liste des Films </button>
+            <button type="button" id="boutonCar">カルーセル &nbsp;&nbsp;Carroussel Ghibli</button>
+        </div>
+    </div>
+</body>
+<script src="./ressources/js/ProjetGhibli.js"></script>
